@@ -19,6 +19,7 @@ Scripts de administración de servidores VPS, configuración DNS en la nube, pip
 *   [**`register-runner.sh`**](./linux/register-runner.sh): Instala y registra un Actions Runner (Gitea/GitHub) en una máquina Linux, configurando un servicio `systemd`.
 *   [**`failback.sh`**](./linux/failback.sh): Script operativo de replicación para retornar la carga de producción de un servidor Standby de vuelta al servidor Primary sin pérdida de datos.
 *   [**`deploy.sh`**](./linux/deploy.sh): Ejecuta un despliegue automático de contenedores en Dokploy/Compose y verifica que el API Backend responda saludablemente.
+*   [**`docker-volume-backup.sh`**](./linux/docker-volume-backup.sh): Respaldo seguro y automatizado de volúmenes Docker y carpetas montadas locales con política de retención de días.
 
 ---
 
@@ -27,6 +28,8 @@ Scripts de Powershell para aprovisionar entornos de compilación de Action Runne
 
 *   [**`windows-runner-setup.ps1`**](./windows/windows-runner-setup.ps1): Automatiza la instalación y registro de act_runner en Windows, instalando opcionalmente Rust toolchain, AWS CLI (para MinIO) y WiX Toolset.
 *   [**`dev-watch.ps1`**](./windows/dev-watch.ps1): Monitorea los cambios de archivos en un Workspace de Cargo e inicia la recarga en caliente de servicios en Rust de forma ágil.
+*   [**`windows-port-killer.ps1`**](./windows/windows-port-killer.ps1): Busca conexiones de red TCP activas en un puerto de red y permite detener/matar el proceso que las mantiene bloqueadas.
+*   [**`windows-clean-workspace.ps1`**](./windows/windows-clean-workspace.ps1): Analiza y limpia de forma recursiva carpetas de compilación pesadas (target/, node_modules/, dist/, etc.) para liberar espacio en disco.
 
 ---
 
