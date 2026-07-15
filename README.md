@@ -20,6 +20,7 @@ Scripts de administración de servidores VPS, configuración DNS en la nube, pip
 *   [**`failback.sh`**](./linux/failback.sh): Script operativo de replicación para retornar la carga de producción de un servidor Standby de vuelta al servidor Primary sin pérdida de datos.
 *   [**`deploy.sh`**](./linux/deploy.sh): Ejecuta un despliegue automático de contenedores en Dokploy/Compose y verifica que el API Backend responda saludablemente.
 *   [**`docker-volume-backup.sh`**](./linux/docker-volume-backup.sh): Respaldo seguro y automatizado de volúmenes Docker y carpetas montadas locales con política de retención de días.
+*   [**`configure_firewall.sh`**](./linux/configure_firewall.sh): Detecta y configura automáticamente el firewall activo del VPS (UFW, firewalld, iptables) y abre los puertos de aplicación (HTTP/HTTPS, MQTT) y salida SMTP para correos. Permite migrar el puerto SSH de forma interactiva y segura.
 
 ---
 

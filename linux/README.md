@@ -65,10 +65,10 @@ Detecta automáticamente el sistema de firewall activo en el VPS (UFW, Firewalld
 *   **Caso de uso**: Apertura de puertos para el tráfico de la aplicación (HTTP/HTTPS, consola de administración, puertos MQTT con/sin TLS y salida SMTP para correos).
 *   **Uso**:
     ```bash
-    # Si vienes de Windows, limpia saltos de línea (CRLF) y dale permisos:
-    tr -d '\r' < configure_firewall.sh > vps_firewall.sh
-    chmod +x vps_firewall.sh
+    # Si vienes de Windows, limpia saltos de línea (CRLF) en el mismo archivo:
+    sed -i 's/\r$//' configure_firewall.sh
+    chmod +x configure_firewall.sh
     # Ejecuta como superusuario:
-    sudo ./vps_firewall.sh
+    sudo ./configure_firewall.sh
     ```
 
